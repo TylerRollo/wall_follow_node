@@ -1,0 +1,450 @@
+[0.000000] (-) TimerEvent: {}
+[0.001986] (wall_follow) JobQueued: {'identifier': 'wall_follow', 'dependencies': OrderedDict()}
+[0.002144] (wall_follow) JobStarted: {'identifier': 'wall_follow'}
+[0.048559] (wall_follow) JobProgress: {'identifier': 'wall_follow', 'progress': 'cmake'}
+[0.051483] (wall_follow) Command: {'cmd': ['/usr/bin/cmake', '/home/tyler/sim_ws/src/wall_follow_node/wall_follow', '-DCMAKE_INSTALL_PREFIX=/home/tyler/sim_ws/src/wall_follow_node/wall_follow/install/wall_follow'], 'cwd': '/home/tyler/sim_ws/src/wall_follow_node/wall_follow/build/wall_follow', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'tyler'), ('ROS_PACKAGE_PATH', '/home/tyler/lab1_ws/install/f1tenth_simulator/share'), ('GIT_ASKPASS', '/home/tyler/.vscode-server/bin/384ff7382de624fb94dbaf6da11977bba1ecd427/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/tyler'), ('OLDPWD', '/home/tyler/sim_ws'), ('TERM_PROGRAM_VERSION', '1.94.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-b949fdc7-4204-4717-9ef0-b47f65a47848.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/tyler/.vscode-server/bin/384ff7382de624fb94dbaf6da11977bba1ecd427/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/tyler/.vscode-server/bin/384ff7382de624fb94dbaf6da11977bba1ecd427/node'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('WSL_DISTRO_NAME', 'Ubuntu-20.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/tyler/lab1_ws/install:/home/tyler/install:/home/tyler/sim_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'tyler'), ('NAME', 'LAPTOP-4AH6M1ML'), ('WSL_INTEROP', '/run/WSL/76617_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/tyler/lab1_ws/install/f1tenth_simulator/lib/x86_64-linux-gnu/pkgconfig:/home/tyler/lab1_ws/install/f1tenth_simulator/lib/pkgconfig'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/tyler/.vscode-server/bin/384ff7382de624fb94dbaf6da11977bba1ecd427/bin/remote-cli:/home/tyler/.local/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Python312/Scripts/:/mnt/c/Python312/:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/tjbas/Downloads/apache-maven-3.8.6-bin:/mnt/c/WinLabMinGW/mingw64/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/tjbas/Desktop/Flex/win_flex_bison-latest:/mnt/c/Program Files/HP/HP One Agent:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Users/pillo/AppData/Roaming/nvm:/mnt/c/Program Files/nodejs:/mnt/d/doxygen/bin:/mnt/c/Users/tjbas/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/tjbas/AppData/Local/Programs/Python/Python310/:/mnt/c/Users/tjbas/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/tjbas/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/tjbas/AppData/Local/Microsoft/WindowsApps:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-bd81b4be8f.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/tyler/sim_ws/install/wall_follow_node:/home/tyler/sim_ws/install/wall_follow:/home/tyler/sim_ws/install/safety_node:/home/tyler/sim_ws/install/f1tenth_gym_ros:/home/tyler/lab1_ws/install/safety_node:/home/tyler/lab1_ws/install/cpp_py_pkg:/home/tyler/install/f1tenth_gym_ros:/home/tyler/install/cpp_py_pkg:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/tyler/sim_ws/src/wall_follow_node/wall_follow/build/wall_follow'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/tyler/sim_ws/install/wall_follow_node/lib/python3.8/site-packages:/home/tyler/sim_ws/install/wall_follow/lib/python3.8/site-packages:/home/tyler/sim_ws/install/safety_node/lib/python3.8/site-packages:/home/tyler/sim_ws/install/f1tenth_gym_ros/lib/python3.8/site-packages:/home/tyler/lab1_ws/install/safety_node/lib/python3.8/site-packages:/home/tyler/lab1_ws/install/cpp_py_pkg/lib/python3.8/site-packages:/home/tyler/install/f1tenth_gym_ros/lib/python3.8/site-packages:/home/tyler/install/f110_gym/lib/python3.8/site-packages:/home/tyler/install/cpp_py_pkg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/tyler/sim_ws/install/wall_follow_node:/home/tyler/sim_ws/install/wall_follow:/home/tyler/sim_ws/install/safety_node:/home/tyler/lab1_ws/install/safety_node:/home/tyler/lab1_ws/install/cpp_py_pkg:/home/tyler/install/cpp_py_pkg:/home/tyler/sim_ws/install/f1tenth_gym_ros:/home/tyler/install/f1tenth_gym_ros:/opt/ros/foxy'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up')]), 'shell': False}
+[0.099587] (-) TimerEvent: {}
+[0.200268] (-) TimerEvent: {}
+[0.300896] (-) TimerEvent: {}
+[0.401464] (-) TimerEvent: {}
+[0.502350] (-) TimerEvent: {}
+[0.603045] (-) TimerEvent: {}
+[0.703705] (-) TimerEvent: {}
+[0.804176] (-) TimerEvent: {}
+[0.920831] (-) TimerEvent: {}
+[1.021411] (-) TimerEvent: {}
+[1.122015] (-) TimerEvent: {}
+[1.222944] (-) TimerEvent: {}
+[1.323617] (-) TimerEvent: {}
+[1.424519] (-) TimerEvent: {}
+[1.525271] (-) TimerEvent: {}
+[1.627906] (-) TimerEvent: {}
+[1.728783] (-) TimerEvent: {}
+[1.829683] (-) TimerEvent: {}
+[1.930476] (-) TimerEvent: {}
+[2.031001] (-) TimerEvent: {}
+[2.131553] (-) TimerEvent: {}
+[2.220778] (wall_follow) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[2.231875] (-) TimerEvent: {}
+[2.332709] (-) TimerEvent: {}
+[2.433138] (-) TimerEvent: {}
+[2.533713] (-) TimerEvent: {}
+[2.634496] (-) TimerEvent: {}
+[2.735322] (-) TimerEvent: {}
+[2.836082] (-) TimerEvent: {}
+[2.937073] (-) TimerEvent: {}
+[3.037737] (-) TimerEvent: {}
+[3.138818] (-) TimerEvent: {}
+[3.239459] (-) TimerEvent: {}
+[3.340267] (-) TimerEvent: {}
+[3.440804] (-) TimerEvent: {}
+[3.541372] (-) TimerEvent: {}
+[3.642038] (-) TimerEvent: {}
+[3.690062] (wall_follow) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[3.742123] (-) TimerEvent: {}
+[3.842865] (-) TimerEvent: {}
+[3.943701] (-) TimerEvent: {}
+[4.044518] (-) TimerEvent: {}
+[4.145226] (-) TimerEvent: {}
+[4.246013] (-) TimerEvent: {}
+[4.319980] (wall_follow) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[4.346430] (-) TimerEvent: {}
+[4.447037] (-) TimerEvent: {}
+[4.547832] (-) TimerEvent: {}
+[4.648479] (-) TimerEvent: {}
+[4.749704] (-) TimerEvent: {}
+[4.851600] (-) TimerEvent: {}
+[4.952173] (-) TimerEvent: {}
+[5.052730] (-) TimerEvent: {}
+[5.153324] (-) TimerEvent: {}
+[5.212281] (wall_follow) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[5.219340] (wall_follow) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[5.253715] (-) TimerEvent: {}
+[5.354334] (-) TimerEvent: {}
+[5.454921] (-) TimerEvent: {}
+[5.555481] (-) TimerEvent: {}
+[5.631429] (wall_follow) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[5.655636] (-) TimerEvent: {}
+[5.685295] (wall_follow) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[5.687429] (wall_follow) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[5.694078] (wall_follow) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[5.755970] (-) TimerEvent: {}
+[5.856800] (-) TimerEvent: {}
+[5.957330] (-) TimerEvent: {}
+[6.042099] (wall_follow) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[6.042480] (wall_follow) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[6.057492] (-) TimerEvent: {}
+[6.157992] (-) TimerEvent: {}
+[6.258531] (-) TimerEvent: {}
+[6.359201] (-) TimerEvent: {}
+[6.377270] (wall_follow) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[6.412387] (wall_follow) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[6.413411] (wall_follow) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[6.459355] (-) TimerEvent: {}
+[6.559969] (-) TimerEvent: {}
+[6.660556] (-) TimerEvent: {}
+[6.761032] (-) TimerEvent: {}
+[6.762451] (wall_follow) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[6.861194] (-) TimerEvent: {}
+[6.862129] (wall_follow) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[6.862522] (wall_follow) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[6.961339] (-) TimerEvent: {}
+[7.061791] (-) TimerEvent: {}
+[7.162306] (-) TimerEvent: {}
+[7.262809] (-) TimerEvent: {}
+[7.363343] (-) TimerEvent: {}
+[7.463902] (-) TimerEvent: {}
+[7.564446] (-) TimerEvent: {}
+[7.665010] (-) TimerEvent: {}
+[7.672134] (wall_follow) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[7.765230] (-) TimerEvent: {}
+[7.865985] (-) TimerEvent: {}
+[7.966430] (-) TimerEvent: {}
+[8.066945] (-) TimerEvent: {}
+[8.167499] (-) TimerEvent: {}
+[8.267997] (-) TimerEvent: {}
+[8.368574] (-) TimerEvent: {}
+[8.469256] (-) TimerEvent: {}
+[8.539424] (wall_follow) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[8.569433] (-) TimerEvent: {}
+[8.586222] (wall_follow) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[8.669758] (-) TimerEvent: {}
+[8.770353] (-) TimerEvent: {}
+[8.870919] (-) TimerEvent: {}
+[8.971480] (-) TimerEvent: {}
+[9.072063] (-) TimerEvent: {}
+[9.172694] (-) TimerEvent: {}
+[9.273361] (-) TimerEvent: {}
+[9.373914] (-) TimerEvent: {}
+[9.474516] (-) TimerEvent: {}
+[9.575082] (-) TimerEvent: {}
+[9.675728] (-) TimerEvent: {}
+[9.776414] (-) TimerEvent: {}
+[9.876988] (-) TimerEvent: {}
+[9.977702] (-) TimerEvent: {}
+[10.078315] (-) TimerEvent: {}
+[10.178945] (-) TimerEvent: {}
+[10.279435] (-) TimerEvent: {}
+[10.380372] (-) TimerEvent: {}
+[10.481177] (-) TimerEvent: {}
+[10.582000] (-) TimerEvent: {}
+[10.682635] (-) TimerEvent: {}
+[10.783256] (-) TimerEvent: {}
+[10.884026] (-) TimerEvent: {}
+[10.984499] (-) TimerEvent: {}
+[11.085017] (-) TimerEvent: {}
+[11.185694] (-) TimerEvent: {}
+[11.286211] (-) TimerEvent: {}
+[11.386821] (-) TimerEvent: {}
+[11.487278] (-) TimerEvent: {}
+[11.587820] (-) TimerEvent: {}
+[11.688530] (-) TimerEvent: {}
+[11.789176] (-) TimerEvent: {}
+[11.889833] (-) TimerEvent: {}
+[11.990406] (-) TimerEvent: {}
+[12.090939] (-) TimerEvent: {}
+[12.191471] (-) TimerEvent: {}
+[12.291949] (-) TimerEvent: {}
+[12.392503] (-) TimerEvent: {}
+[12.493271] (-) TimerEvent: {}
+[12.593965] (-) TimerEvent: {}
+[12.699097] (-) TimerEvent: {}
+[12.746262] (wall_follow) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[12.799328] (-) TimerEvent: {}
+[12.900253] (-) TimerEvent: {}
+[13.000831] (-) TimerEvent: {}
+[13.101580] (-) TimerEvent: {}
+[13.202307] (-) TimerEvent: {}
+[13.302932] (-) TimerEvent: {}
+[13.409621] (-) TimerEvent: {}
+[13.510190] (-) TimerEvent: {}
+[13.610700] (-) TimerEvent: {}
+[13.711258] (-) TimerEvent: {}
+[13.811733] (-) TimerEvent: {}
+[13.912341] (-) TimerEvent: {}
+[14.012996] (-) TimerEvent: {}
+[14.113645] (-) TimerEvent: {}
+[14.214289] (-) TimerEvent: {}
+[14.314850] (-) TimerEvent: {}
+[14.415344] (-) TimerEvent: {}
+[14.515991] (-) TimerEvent: {}
+[14.616757] (-) TimerEvent: {}
+[14.717440] (-) TimerEvent: {}
+[14.818156] (-) TimerEvent: {}
+[14.918673] (-) TimerEvent: {}
+[15.019198] (-) TimerEvent: {}
+[15.119701] (-) TimerEvent: {}
+[15.220282] (-) TimerEvent: {}
+[15.321031] (-) TimerEvent: {}
+[15.421653] (-) TimerEvent: {}
+[15.522352] (-) TimerEvent: {}
+[15.622935] (-) TimerEvent: {}
+[15.723702] (-) TimerEvent: {}
+[15.824391] (-) TimerEvent: {}
+[15.925133] (-) TimerEvent: {}
+[16.025641] (-) TimerEvent: {}
+[16.126150] (-) TimerEvent: {}
+[16.226696] (-) TimerEvent: {}
+[16.327284] (-) TimerEvent: {}
+[16.427783] (-) TimerEvent: {}
+[16.528325] (-) TimerEvent: {}
+[16.551665] (wall_follow) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[16.628562] (-) TimerEvent: {}
+[16.729172] (-) TimerEvent: {}
+[16.829766] (-) TimerEvent: {}
+[16.930330] (-) TimerEvent: {}
+[17.030897] (-) TimerEvent: {}
+[17.131433] (-) TimerEvent: {}
+[17.231969] (-) TimerEvent: {}
+[17.332919] (-) TimerEvent: {}
+[17.433906] (-) TimerEvent: {}
+[17.534433] (-) TimerEvent: {}
+[17.635078] (-) TimerEvent: {}
+[17.735724] (-) TimerEvent: {}
+[17.836452] (-) TimerEvent: {}
+[17.937188] (-) TimerEvent: {}
+[18.037718] (-) TimerEvent: {}
+[18.138415] (-) TimerEvent: {}
+[18.239194] (-) TimerEvent: {}
+[18.339737] (-) TimerEvent: {}
+[18.440521] (-) TimerEvent: {}
+[18.541164] (-) TimerEvent: {}
+[18.641773] (-) TimerEvent: {}
+[18.742368] (-) TimerEvent: {}
+[18.842836] (-) TimerEvent: {}
+[18.943388] (-) TimerEvent: {}
+[19.044012] (-) TimerEvent: {}
+[19.144539] (-) TimerEvent: {}
+[19.245016] (-) TimerEvent: {}
+[19.345618] (-) TimerEvent: {}
+[19.446216] (-) TimerEvent: {}
+[19.546876] (-) TimerEvent: {}
+[19.647449] (-) TimerEvent: {}
+[19.748018] (-) TimerEvent: {}
+[19.848559] (-) TimerEvent: {}
+[19.949116] (-) TimerEvent: {}
+[20.049614] (-) TimerEvent: {}
+[20.150169] (-) TimerEvent: {}
+[20.250646] (-) TimerEvent: {}
+[20.351216] (-) TimerEvent: {}
+[20.451918] (-) TimerEvent: {}
+[20.552792] (-) TimerEvent: {}
+[20.653514] (-) TimerEvent: {}
+[20.754113] (-) TimerEvent: {}
+[20.854729] (-) TimerEvent: {}
+[20.955542] (-) TimerEvent: {}
+[21.056213] (-) TimerEvent: {}
+[21.156805] (-) TimerEvent: {}
+[21.257404] (-) TimerEvent: {}
+[21.358050] (-) TimerEvent: {}
+[21.458586] (-) TimerEvent: {}
+[21.559084] (-) TimerEvent: {}
+[21.659741] (-) TimerEvent: {}
+[21.760402] (-) TimerEvent: {}
+[21.837246] (wall_follow) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[21.860628] (-) TimerEvent: {}
+[21.961200] (-) TimerEvent: {}
+[22.061877] (-) TimerEvent: {}
+[22.113463] (wall_follow) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[22.135368] (wall_follow) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[22.141619] (wall_follow) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[22.162055] (-) TimerEvent: {}
+[22.262617] (-) TimerEvent: {}
+[22.363091] (-) TimerEvent: {}
+[22.463647] (-) TimerEvent: {}
+[22.564462] (-) TimerEvent: {}
+[22.635991] (wall_follow) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[22.636795] (wall_follow) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[22.664717] (-) TimerEvent: {}
+[22.765234] (-) TimerEvent: {}
+[22.866045] (-) TimerEvent: {}
+[22.966767] (-) TimerEvent: {}
+[23.054569] (wall_follow) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[23.055186] (wall_follow) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[23.066935] (-) TimerEvent: {}
+[23.167571] (-) TimerEvent: {}
+[23.268201] (-) TimerEvent: {}
+[23.368735] (-) TimerEvent: {}
+[23.469336] (-) TimerEvent: {}
+[23.482886] (wall_follow) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[23.483276] (wall_follow) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[23.569628] (-) TimerEvent: {}
+[23.670324] (-) TimerEvent: {}
+[23.770769] (-) TimerEvent: {}
+[23.918016] (-) TimerEvent: {}
+[23.965434] (wall_follow) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[23.969324] (wall_follow) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[24.018240] (-) TimerEvent: {}
+[24.118901] (-) TimerEvent: {}
+[24.219795] (-) TimerEvent: {}
+[24.320713] (-) TimerEvent: {}
+[24.421333] (-) TimerEvent: {}
+[24.522116] (-) TimerEvent: {}
+[24.597705] (wall_follow) StdoutLine: {'line': b'-- Found rclpy: 1.0.13 (/opt/ros/foxy/share/rclpy/cmake)\n'}
+[24.622799] (-) TimerEvent: {}
+[24.653156] (wall_follow) StdoutLine: {'line': b'-- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)\n'}
+[24.723105] (-) TimerEvent: {}
+[24.823871] (-) TimerEvent: {}
+[24.844290] (wall_follow) StdoutLine: {'line': b'-- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)\n'}
+[24.924087] (-) TimerEvent: {}
+[25.024688] (-) TimerEvent: {}
+[25.041287] (wall_follow) StdoutLine: {'line': b'-- Found ackermann_msgs: 2.0.2 (/opt/ros/foxy/share/ackermann_msgs/cmake)\n'}
+[25.124917] (-) TimerEvent: {}
+[25.125722] (wall_follow) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[25.225095] (-) TimerEvent: {}
+[25.325608] (-) TimerEvent: {}
+[25.426105] (-) TimerEvent: {}
+[25.513360] (wall_follow) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[25.526281] (-) TimerEvent: {}
+[25.626785] (-) TimerEvent: {}
+[25.727275] (-) TimerEvent: {}
+[25.827766] (-) TimerEvent: {}
+[25.893183] (wall_follow) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[25.916699] (wall_follow) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[25.917351] (wall_follow) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/tyler/sim_ws/src/wall_follow_node/wall_follow/include\n'}
+[25.917501] (wall_follow) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[25.927943] (-) TimerEvent: {}
+[25.940379] (wall_follow) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[25.941280] (wall_follow) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[25.948492] (wall_follow) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[25.954077] (wall_follow) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[25.959248] (wall_follow) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[25.981350] (wall_follow) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[25.981696] (wall_follow) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[25.987107] (wall_follow) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[25.997276] (wall_follow) StdoutLine: {'line': b'-- Configuring done\n'}
+[26.028124] (-) TimerEvent: {}
+[26.063411] (wall_follow) StdoutLine: {'line': b'-- Generating done\n'}
+[26.075889] (wall_follow) StdoutLine: {'line': b'-- Build files have been written to: /home/tyler/sim_ws/src/wall_follow_node/wall_follow/build/wall_follow\n'}
+[26.094759] (wall_follow) CommandEnded: {'returncode': 0}
+[26.104436] (wall_follow) JobProgress: {'identifier': 'wall_follow', 'progress': 'build'}
+[26.104607] (wall_follow) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/tyler/sim_ws/src/wall_follow_node/wall_follow/build/wall_follow', '--', '-j8', '-l8'], 'cwd': '/home/tyler/sim_ws/src/wall_follow_node/wall_follow/build/wall_follow', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'tyler'), ('ROS_PACKAGE_PATH', '/home/tyler/lab1_ws/install/f1tenth_simulator/share'), ('GIT_ASKPASS', '/home/tyler/.vscode-server/bin/384ff7382de624fb94dbaf6da11977bba1ecd427/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/tyler'), ('OLDPWD', '/home/tyler/sim_ws'), ('TERM_PROGRAM_VERSION', '1.94.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-b949fdc7-4204-4717-9ef0-b47f65a47848.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/tyler/.vscode-server/bin/384ff7382de624fb94dbaf6da11977bba1ecd427/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/tyler/.vscode-server/bin/384ff7382de624fb94dbaf6da11977bba1ecd427/node'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('WSL_DISTRO_NAME', 'Ubuntu-20.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/tyler/lab1_ws/install:/home/tyler/install:/home/tyler/sim_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'tyler'), ('NAME', 'LAPTOP-4AH6M1ML'), ('WSL_INTEROP', '/run/WSL/76617_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/tyler/lab1_ws/install/f1tenth_simulator/lib/x86_64-linux-gnu/pkgconfig:/home/tyler/lab1_ws/install/f1tenth_simulator/lib/pkgconfig'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/tyler/.vscode-server/bin/384ff7382de624fb94dbaf6da11977bba1ecd427/bin/remote-cli:/home/tyler/.local/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Python312/Scripts/:/mnt/c/Python312/:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/tjbas/Downloads/apache-maven-3.8.6-bin:/mnt/c/WinLabMinGW/mingw64/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/tjbas/Desktop/Flex/win_flex_bison-latest:/mnt/c/Program Files/HP/HP One Agent:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Users/pillo/AppData/Roaming/nvm:/mnt/c/Program Files/nodejs:/mnt/d/doxygen/bin:/mnt/c/Users/tjbas/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/tjbas/AppData/Local/Programs/Python/Python310/:/mnt/c/Users/tjbas/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/tjbas/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/tjbas/AppData/Local/Microsoft/WindowsApps:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-bd81b4be8f.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/tyler/sim_ws/install/wall_follow_node:/home/tyler/sim_ws/install/wall_follow:/home/tyler/sim_ws/install/safety_node:/home/tyler/sim_ws/install/f1tenth_gym_ros:/home/tyler/lab1_ws/install/safety_node:/home/tyler/lab1_ws/install/cpp_py_pkg:/home/tyler/install/f1tenth_gym_ros:/home/tyler/install/cpp_py_pkg:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/tyler/sim_ws/src/wall_follow_node/wall_follow/build/wall_follow'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/tyler/sim_ws/install/wall_follow_node/lib/python3.8/site-packages:/home/tyler/sim_ws/install/wall_follow/lib/python3.8/site-packages:/home/tyler/sim_ws/install/safety_node/lib/python3.8/site-packages:/home/tyler/sim_ws/install/f1tenth_gym_ros/lib/python3.8/site-packages:/home/tyler/lab1_ws/install/safety_node/lib/python3.8/site-packages:/home/tyler/lab1_ws/install/cpp_py_pkg/lib/python3.8/site-packages:/home/tyler/install/f1tenth_gym_ros/lib/python3.8/site-packages:/home/tyler/install/f110_gym/lib/python3.8/site-packages:/home/tyler/install/cpp_py_pkg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/tyler/sim_ws/install/wall_follow_node:/home/tyler/sim_ws/install/wall_follow:/home/tyler/sim_ws/install/safety_node:/home/tyler/lab1_ws/install/safety_node:/home/tyler/lab1_ws/install/cpp_py_pkg:/home/tyler/install/cpp_py_pkg:/home/tyler/sim_ws/install/f1tenth_gym_ros:/home/tyler/install/f1tenth_gym_ros:/opt/ros/foxy'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up')]), 'shell': False}
+[26.128369] (-) TimerEvent: {}
+[26.185536] (wall_follow) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target wall_follow_node\x1b[0m\n'}
+[26.228534] (-) TimerEvent: {}
+[26.329306] (-) TimerEvent: {}
+[26.430144] (-) TimerEvent: {}
+[26.531139] (-) TimerEvent: {}
+[26.631939] (-) TimerEvent: {}
+[26.732494] (-) TimerEvent: {}
+[26.737552] (wall_follow) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/wall_follow_node.dir/src/wall_follow_node.cpp.o\x1b[0m\n'}
+[26.832767] (-) TimerEvent: {}
+[26.933423] (-) TimerEvent: {}
+[27.034115] (-) TimerEvent: {}
+[27.134940] (-) TimerEvent: {}
+[27.235697] (-) TimerEvent: {}
+[27.336256] (-) TimerEvent: {}
+[27.436801] (-) TimerEvent: {}
+[27.537346] (-) TimerEvent: {}
+[27.637793] (-) TimerEvent: {}
+[27.738339] (-) TimerEvent: {}
+[27.838903] (-) TimerEvent: {}
+[27.939442] (-) TimerEvent: {}
+[28.040022] (-) TimerEvent: {}
+[28.140507] (-) TimerEvent: {}
+[28.240980] (-) TimerEvent: {}
+[28.341454] (-) TimerEvent: {}
+[28.442008] (-) TimerEvent: {}
+[28.542595] (-) TimerEvent: {}
+[28.643163] (-) TimerEvent: {}
+[28.743647] (-) TimerEvent: {}
+[28.844134] (-) TimerEvent: {}
+[28.944616] (-) TimerEvent: {}
+[29.045152] (-) TimerEvent: {}
+[29.145575] (-) TimerEvent: {}
+[29.246143] (-) TimerEvent: {}
+[29.346762] (-) TimerEvent: {}
+[29.447289] (-) TimerEvent: {}
+[29.547984] (-) TimerEvent: {}
+[29.648408] (-) TimerEvent: {}
+[29.748827] (-) TimerEvent: {}
+[29.849347] (-) TimerEvent: {}
+[29.949940] (-) TimerEvent: {}
+[30.045067] (wall_follow) StderrLine: {'line': b'\x1b[01m\x1b[K/home/tyler/sim_ws/src/wall_follow_node/wall_follow/src/wall_follow_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kdouble WallFollow::get_range(float*, double)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[30.045642] (wall_follow) StderrLine: {'line': b'\x1b[01m\x1b[K/home/tyler/sim_ws/src/wall_follow_node/wall_follow/src/wall_follow_node.cpp:30:29:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Krange_data\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[30.045904] (wall_follow) StderrLine: {'line': b'   30 |     double get_range(\x1b[01;35m\x1b[Kfloat* range_data\x1b[m\x1b[K, double angle)\n'}
+[30.046098] (wall_follow) StderrLine: {'line': b'      |                      \x1b[01;35m\x1b[K~~~~~~~^~~~~~~~~~\x1b[m\x1b[K\n'}
+[30.046282] (wall_follow) StderrLine: {'line': b'\x1b[01m\x1b[K/home/tyler/sim_ws/src/wall_follow_node/wall_follow/src/wall_follow_node.cpp:30:48:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kangle\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[30.046582] (wall_follow) StderrLine: {'line': b'   30 |     double get_range(float* range_data, \x1b[01;35m\x1b[Kdouble angle\x1b[m\x1b[K)\n'}
+[30.046750] (wall_follow) StderrLine: {'line': b'      |                                         \x1b[01;35m\x1b[K~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[30.046903] (wall_follow) StderrLine: {'line': b'\x1b[01m\x1b[K/home/tyler/sim_ws/src/wall_follow_node/wall_follow/src/wall_follow_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kdouble WallFollow::get_error(float*, double)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[30.047080] (wall_follow) StderrLine: {'line': b'\x1b[01m\x1b[K/home/tyler/sim_ws/src/wall_follow_node/wall_follow/src/wall_follow_node.cpp:47:29:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Krange_data\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[30.047236] (wall_follow) StderrLine: {'line': b'   47 |     double get_error(\x1b[01;35m\x1b[Kfloat* range_data\x1b[m\x1b[K, double dist)\n'}
+[30.047402] (wall_follow) StderrLine: {'line': b'      |                      \x1b[01;35m\x1b[K~~~~~~~^~~~~~~~~~\x1b[m\x1b[K\n'}
+[30.047580] (wall_follow) StderrLine: {'line': b'\x1b[01m\x1b[K/home/tyler/sim_ws/src/wall_follow_node/wall_follow/src/wall_follow_node.cpp:47:48:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kdist\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[30.047758] (wall_follow) StderrLine: {'line': b'   47 |     double get_error(float* range_data, \x1b[01;35m\x1b[Kdouble dist\x1b[m\x1b[K)\n'}
+[30.047938] (wall_follow) StderrLine: {'line': b'      |                                         \x1b[01;35m\x1b[K~~~~~~~^~~~\x1b[m\x1b[K\n'}
+[30.048209] (wall_follow) StderrLine: {'line': b'\x1b[01m\x1b[K/home/tyler/sim_ws/src/wall_follow_node/wall_follow/src/wall_follow_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid WallFollow::pid_control(double, double)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[30.048400] (wall_follow) StderrLine: {'line': b'\x1b[01m\x1b[K/home/tyler/sim_ws/src/wall_follow_node/wall_follow/src/wall_follow_node.cpp:76:16:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kangle\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[30.048603] (wall_follow) StderrLine: {'line': b'   76 |         double \x1b[01;35m\x1b[Kangle\x1b[m\x1b[K = 0.0;\n'}
+[30.048780] (wall_follow) StderrLine: {'line': b'      |                \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[30.049388] (wall_follow) StderrLine: {'line': b'\x1b[01m\x1b[K/home/tyler/sim_ws/src/wall_follow_node/wall_follow/src/wall_follow_node.cpp:64:29:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kerror\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[30.049564] (wall_follow) StderrLine: {'line': b'   64 |     void pid_control(\x1b[01;35m\x1b[Kdouble error\x1b[m\x1b[K, double velocity)\n'}
+[30.049665] (wall_follow) StderrLine: {'line': b'      |                      \x1b[01;35m\x1b[K~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[30.049757] (wall_follow) StderrLine: {'line': b'\x1b[01m\x1b[K/home/tyler/sim_ws/src/wall_follow_node/wall_follow/src/wall_follow_node.cpp:64:43:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kvelocity\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[30.049848] (wall_follow) StderrLine: {'line': b'   64 |     void pid_control(double error, \x1b[01;35m\x1b[Kdouble velocity\x1b[m\x1b[K)\n'}
+[30.049929] (-) TimerEvent: {}
+[30.050099] (wall_follow) StderrLine: {'line': b'      |                                    \x1b[01;35m\x1b[K~~~~~~~^~~~~~~~\x1b[m\x1b[K\n'}
+[30.051407] (wall_follow) StderrLine: {'line': b'\x1b[01m\x1b[K/home/tyler/sim_ws/src/wall_follow_node/wall_follow/src/wall_follow_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid WallFollow::scan_callback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::ConstSharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[30.051566] (wall_follow) StderrLine: {'line': b'\x1b[01m\x1b[K/home/tyler/sim_ws/src/wall_follow_node/wall_follow/src/wall_follow_node.cpp:93:16:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kerror\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[30.051671] (wall_follow) StderrLine: {'line': b'   93 |         double \x1b[01;35m\x1b[Kerror\x1b[m\x1b[K = 0.0; // TODO: replace with error calculated by get_error()\n'}
+[30.051858] (wall_follow) StderrLine: {'line': b'      |                \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[30.052002] (wall_follow) StderrLine: {'line': b'\x1b[01m\x1b[K/home/tyler/sim_ws/src/wall_follow_node/wall_follow/src/wall_follow_node.cpp:94:16:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kvelocity\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[30.052151] (wall_follow) StderrLine: {'line': b'   94 |         double \x1b[01;35m\x1b[Kvelocity\x1b[m\x1b[K = 0.0; // TODO: calculate desired car velocity based on error\n'}
+[30.052284] (wall_follow) StderrLine: {'line': b'      |                \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[30.052383] (wall_follow) StderrLine: {'line': b'\x1b[01m\x1b[K/home/tyler/sim_ws/src/wall_follow_node/wall_follow/src/wall_follow_node.cpp:82:74:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kscan_msg\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[30.052504] (wall_follow) StderrLine: {'line': b'   82 |     void scan_callback(\x1b[01;35m\x1b[Kconst sensor_msgs::msg::LaserScan::ConstSharedPtr scan_msg\x1b[m\x1b[K)\n'}
+[30.052594] (wall_follow) StderrLine: {'line': b'      |                        \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~\x1b[m\x1b[K\n'}
+[30.150144] (-) TimerEvent: {}
+[30.250672] (-) TimerEvent: {}
+[30.351222] (-) TimerEvent: {}
+[30.453346] (-) TimerEvent: {}
+[30.554075] (-) TimerEvent: {}
+[30.654591] (-) TimerEvent: {}
+[30.755049] (-) TimerEvent: {}
+[30.855596] (-) TimerEvent: {}
+[30.956151] (-) TimerEvent: {}
+[31.056960] (-) TimerEvent: {}
+[31.157509] (-) TimerEvent: {}
+[31.166213] (wall_follow) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable wall_follow_node\x1b[0m\n'}
+[31.257772] (-) TimerEvent: {}
+[31.358470] (-) TimerEvent: {}
+[31.459163] (-) TimerEvent: {}
+[31.560006] (-) TimerEvent: {}
+[31.660783] (-) TimerEvent: {}
+[31.761565] (-) TimerEvent: {}
+[31.847944] (wall_follow) StdoutLine: {'line': b'[100%] Built target wall_follow_node\n'}
+[31.861808] (-) TimerEvent: {}
+[31.872582] (wall_follow) CommandEnded: {'returncode': 0}
+[31.916824] (wall_follow) JobProgress: {'identifier': 'wall_follow', 'progress': 'install'}
+[31.936749] (wall_follow) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/tyler/sim_ws/src/wall_follow_node/wall_follow/build/wall_follow'], 'cwd': '/home/tyler/sim_ws/src/wall_follow_node/wall_follow/build/wall_follow', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'tyler'), ('ROS_PACKAGE_PATH', '/home/tyler/lab1_ws/install/f1tenth_simulator/share'), ('GIT_ASKPASS', '/home/tyler/.vscode-server/bin/384ff7382de624fb94dbaf6da11977bba1ecd427/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/tyler'), ('OLDPWD', '/home/tyler/sim_ws'), ('TERM_PROGRAM_VERSION', '1.94.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-b949fdc7-4204-4717-9ef0-b47f65a47848.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/tyler/.vscode-server/bin/384ff7382de624fb94dbaf6da11977bba1ecd427/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/tyler/.vscode-server/bin/384ff7382de624fb94dbaf6da11977bba1ecd427/node'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('WSL_DISTRO_NAME', 'Ubuntu-20.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/tyler/lab1_ws/install:/home/tyler/install:/home/tyler/sim_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'tyler'), ('NAME', 'LAPTOP-4AH6M1ML'), ('WSL_INTEROP', '/run/WSL/76617_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/tyler/lab1_ws/install/f1tenth_simulator/lib/x86_64-linux-gnu/pkgconfig:/home/tyler/lab1_ws/install/f1tenth_simulator/lib/pkgconfig'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/tyler/.vscode-server/bin/384ff7382de624fb94dbaf6da11977bba1ecd427/bin/remote-cli:/home/tyler/.local/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Python312/Scripts/:/mnt/c/Python312/:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/tjbas/Downloads/apache-maven-3.8.6-bin:/mnt/c/WinLabMinGW/mingw64/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/tjbas/Desktop/Flex/win_flex_bison-latest:/mnt/c/Program Files/HP/HP One Agent:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Users/pillo/AppData/Roaming/nvm:/mnt/c/Program Files/nodejs:/mnt/d/doxygen/bin:/mnt/c/Users/tjbas/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/tjbas/AppData/Local/Programs/Python/Python310/:/mnt/c/Users/tjbas/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/tjbas/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/tjbas/AppData/Local/Microsoft/WindowsApps:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-bd81b4be8f.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/tyler/sim_ws/install/wall_follow_node:/home/tyler/sim_ws/install/wall_follow:/home/tyler/sim_ws/install/safety_node:/home/tyler/sim_ws/install/f1tenth_gym_ros:/home/tyler/lab1_ws/install/safety_node:/home/tyler/lab1_ws/install/cpp_py_pkg:/home/tyler/install/f1tenth_gym_ros:/home/tyler/install/cpp_py_pkg:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/tyler/sim_ws/src/wall_follow_node/wall_follow/build/wall_follow'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/tyler/sim_ws/install/wall_follow_node/lib/python3.8/site-packages:/home/tyler/sim_ws/install/wall_follow/lib/python3.8/site-packages:/home/tyler/sim_ws/install/safety_node/lib/python3.8/site-packages:/home/tyler/sim_ws/install/f1tenth_gym_ros/lib/python3.8/site-packages:/home/tyler/lab1_ws/install/safety_node/lib/python3.8/site-packages:/home/tyler/lab1_ws/install/cpp_py_pkg/lib/python3.8/site-packages:/home/tyler/install/f1tenth_gym_ros/lib/python3.8/site-packages:/home/tyler/install/f110_gym/lib/python3.8/site-packages:/home/tyler/install/cpp_py_pkg/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/tyler/sim_ws/install/wall_follow_node:/home/tyler/sim_ws/install/wall_follow:/home/tyler/sim_ws/install/safety_node:/home/tyler/lab1_ws/install/safety_node:/home/tyler/lab1_ws/install/cpp_py_pkg:/home/tyler/install/cpp_py_pkg:/home/tyler/sim_ws/install/f1tenth_gym_ros:/home/tyler/install/f1tenth_gym_ros:/opt/ros/foxy'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up')]), 'shell': False}
+[31.954722] (wall_follow) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[31.955633] (wall_follow) StdoutLine: {'line': b'-- Installing: /home/tyler/sim_ws/src/wall_follow_node/wall_follow/install/wall_follow/lib/wall_follow/wall_follow_node\n'}
+[31.956643] (wall_follow) StdoutLine: {'line': b'-- Set runtime path of "/home/tyler/sim_ws/src/wall_follow_node/wall_follow/install/wall_follow/lib/wall_follow/wall_follow_node" to ""\n'}
+[31.957621] (wall_follow) StdoutLine: {'line': b'-- Installing: /home/tyler/sim_ws/src/wall_follow_node/wall_follow/install/wall_follow/share/wall_follow/environment/pythonpath.sh\n'}
+[31.958059] (wall_follow) StdoutLine: {'line': b'-- Installing: /home/tyler/sim_ws/src/wall_follow_node/wall_follow/install/wall_follow/share/wall_follow/environment/pythonpath.dsv\n'}
+[31.958750] (wall_follow) StdoutLine: {'line': b'-- Installing: /home/tyler/sim_ws/src/wall_follow_node/wall_follow/install/wall_follow/lib/python3.8/site-packages/wall_follow\n'}
+[31.959304] (wall_follow) StdoutLine: {'line': b'-- Installing: /home/tyler/sim_ws/src/wall_follow_node/wall_follow/install/wall_follow/lib/python3.8/site-packages/wall_follow/__init__.py\n'}
+[31.962011] (-) TimerEvent: {}
+[32.019678] (wall_follow) StdoutLine: {'line': b"Listing '/home/tyler/sim_ws/src/wall_follow_node/wall_follow/install/wall_follow/lib/python3.8/site-packages/wall_follow'...\n"}
+[32.019987] (wall_follow) StdoutLine: {'line': b"Compiling '/home/tyler/sim_ws/src/wall_follow_node/wall_follow/install/wall_follow/lib/python3.8/site-packages/wall_follow/__init__.py'...\n"}
+[32.025266] (wall_follow) StdoutLine: {'line': b'-- Installing: /home/tyler/sim_ws/src/wall_follow_node/wall_follow/install/wall_follow/lib/wall_follow/wall_follow_node.py\n'}
+[32.026208] (wall_follow) StdoutLine: {'line': b'-- Installing: /home/tyler/sim_ws/src/wall_follow_node/wall_follow/install/wall_follow/share/ament_index/resource_index/package_run_dependencies/wall_follow\n'}
+[32.026851] (wall_follow) StdoutLine: {'line': b'-- Installing: /home/tyler/sim_ws/src/wall_follow_node/wall_follow/install/wall_follow/share/ament_index/resource_index/parent_prefix_path/wall_follow\n'}
+[32.027304] (wall_follow) StdoutLine: {'line': b'-- Installing: /home/tyler/sim_ws/src/wall_follow_node/wall_follow/install/wall_follow/share/wall_follow/environment/ament_prefix_path.sh\n'}
+[32.027843] (wall_follow) StdoutLine: {'line': b'-- Installing: /home/tyler/sim_ws/src/wall_follow_node/wall_follow/install/wall_follow/share/wall_follow/environment/ament_prefix_path.dsv\n'}
+[32.028288] (wall_follow) StdoutLine: {'line': b'-- Installing: /home/tyler/sim_ws/src/wall_follow_node/wall_follow/install/wall_follow/share/wall_follow/environment/path.sh\n'}
+[32.029372] (wall_follow) StdoutLine: {'line': b'-- Installing: /home/tyler/sim_ws/src/wall_follow_node/wall_follow/install/wall_follow/share/wall_follow/environment/path.dsv\n'}
+[32.029678] (wall_follow) StdoutLine: {'line': b'-- Installing: /home/tyler/sim_ws/src/wall_follow_node/wall_follow/install/wall_follow/share/wall_follow/local_setup.bash\n'}
+[32.030140] (wall_follow) StdoutLine: {'line': b'-- Installing: /home/tyler/sim_ws/src/wall_follow_node/wall_follow/install/wall_follow/share/wall_follow/local_setup.sh\n'}
+[32.030584] (wall_follow) StdoutLine: {'line': b'-- Installing: /home/tyler/sim_ws/src/wall_follow_node/wall_follow/install/wall_follow/share/wall_follow/local_setup.zsh\n'}
+[32.030818] (wall_follow) StdoutLine: {'line': b'-- Installing: /home/tyler/sim_ws/src/wall_follow_node/wall_follow/install/wall_follow/share/wall_follow/local_setup.dsv\n'}
+[32.031265] (wall_follow) StdoutLine: {'line': b'-- Installing: /home/tyler/sim_ws/src/wall_follow_node/wall_follow/install/wall_follow/share/wall_follow/package.dsv\n'}
+[32.031526] (wall_follow) StdoutLine: {'line': b'-- Installing: /home/tyler/sim_ws/src/wall_follow_node/wall_follow/install/wall_follow/share/ament_index/resource_index/packages/wall_follow\n'}
+[32.032359] (wall_follow) StdoutLine: {'line': b'-- Installing: /home/tyler/sim_ws/src/wall_follow_node/wall_follow/install/wall_follow/share/wall_follow/cmake/wall_followConfig.cmake\n'}
+[32.032942] (wall_follow) StdoutLine: {'line': b'-- Installing: /home/tyler/sim_ws/src/wall_follow_node/wall_follow/install/wall_follow/share/wall_follow/cmake/wall_followConfig-version.cmake\n'}
+[32.033812] (wall_follow) StdoutLine: {'line': b'-- Installing: /home/tyler/sim_ws/src/wall_follow_node/wall_follow/install/wall_follow/share/wall_follow/package.xml\n'}
+[32.037735] (wall_follow) CommandEnded: {'returncode': 0}
+[32.062309] (-) TimerEvent: {}
+[32.116500] (wall_follow) JobEnded: {'identifier': 'wall_follow', 'rc': 0}
+[32.119759] (-) EventReactorShutdown: {}

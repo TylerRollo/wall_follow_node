@@ -19,7 +19,7 @@ class WallFollow(Node):
         self.lidar_subscription = self.create_subscription(
             LaserScan,
             '/scan',
-            self.error_calculation,
+            self.scan_callback,
             10
         )
 
@@ -29,89 +29,151 @@ class WallFollow(Node):
             10
         )
 
+        # TODO: set PID gains
+        self.kp = .8
+        self.ki = 0.06
+        self.kd = 0.00005
 
-        # Initialize variables
-        self.kp = 5.0
-        self.ki = 0.0
-        self.kd = 0.2
-        self.look_ahead_distance = 0.05
-        self.steer_angle = 0.0
-        self.last_time_reading = self.get_clock().now()
-        self.current_time_reading = self.get_clock().now()
-        self.error_dist = 0.0
-        self.last_error_dist = 0.0
+        # TODO: store history
         self.integral = 0.0
-        self.speed = 0.0
-        self.initial_time = self.get_clock().now()
+        self.prev_error = 0.0 
+        self.error = 0.0
 
-    def get_duration_in_seconds(self, time_now, time_then):
-        return (time_now - time_then).nanoseconds * 1e-9
+        # TODO: store any necessary values you think you'll need
+        self.desired_distance = 1
+        self.prev_time = self.start_time = Node.get_clock(self).now()
+        
+    """
+    Simple helper to return the corresponding range measurement at a given angle. Make sure you take care of NaNs and infs.
 
-    def error_calculation(self, scan_msg):
-        angle_increment = 0.005823
-        theta_a = angle_increment * 195  # Angle for a_dist (65 degrees)
-        theta_c = angle_increment * 165  # Angle for c_dist (55 degrees)
+    Args:
+        range_data: single range array from the LiDAR
+        angle: between angle_min and angle_max of the LiDAR
 
-        b_dist = scan_msg.ranges[809]
-        a_dist = scan_msg.ranges[614]
-        c_dist = scan_msg.ranges[644]
+    Returns:
+        range: range measurement in meters at the given angle
 
-        # Calculate the angles and distances
-        a1_angle = np.arctan((a_dist * np.cos(theta_a) - b_dist) / (a_dist * np.sin(theta_a)))
-        d_ta = b_dist * np.cos(a1_angle)
+    """
+    def get_range(self, range_data, angle):
+        #TODO: implement
+        # Ensure the angle is within the bounds of the LiDAR's angle_min and angle_max
+        if angle < range_data.angle_min or angle > range_data.angle_max:
+            return float('nan')  # Return NaN if the angle is out of range
 
-        a2_angle = np.arctan((c_dist * np.cos(theta_c) - b_dist) / (c_dist * np.sin(theta_c)))
-        d_tc = b_dist * np.cos(a2_angle)
+        # Calculate the index for the given angle
+        index = int((angle - range_data.angle_min) / range_data.angle_increment)
 
-        d_t = 0.5 * (d_ta + d_tc)
+        # Ensure the index is within valid bounds
+        if index < 0 or index >= len(range_data.ranges):
+            return float('nan')  # Return NaN if the index is out of bounds
 
-        # Error distance calculation
-        self.error_dist = 1.35 - d_t
-        if self.get_duration_in_seconds(self.get_clock().now(), self.initial_time) < 5:
-            self.error_dist *= 0.3
+        return range_data.ranges[index]
 
-        self.pid_controller()
+    """
+    Calculates the error to the wall. Follow the wall to the left (going counter clockwise in the Levine loop). You potentially will need to use get_range()
 
-    def pid_controller(self):
-        self.current_time_reading = self.get_clock().now()
-        dt = self.get_duration_in_seconds(self.current_time_reading, self.last_time_reading)
+    Args:
+        range_data: single range array from the LiDAR
+        dist: desired distance to the wall
 
-        # PID calculations
-        self.integral += self.error_dist * dt
-        d_error = (self.error_dist - self.last_error_dist) / dt if dt > 0 else 0.0
-        self.last_time_reading = self.current_time_reading
-        self.last_error_dist = self.error_dist
+    Returns:
+        error: calculated error
+    """
 
-        if self.get_duration_in_seconds(self.current_time_reading, self.initial_time) < 5:
-            d_error = 0  # Cancel the initial volatile behavior of d_error
+    def get_error(self, range_data, dist):
+        # Measure distances to the left wall
+        a = self.get_range(range_data, np.radians(45))  # Convert to radians
+        b = self.get_range(range_data, np.radians(90))  # Convert to radians
 
-        self.steer_angle = -self.kp * self.error_dist + self.ki * self.integral + self.kd * d_error
+        # Avoid NaN or inf values
+        if np.isnan(a) or np.isnan(b) or np.isinf(a) or np.isinf(b):
+            return 0.0  # Return no error if the measurements are invalid
 
-        # Clamp the steering angle
-        self.steer_angle = max(min(self.steer_angle, np.pi), -np.pi)
+        # Calculate alpha using the provided formula
+        alpha = np.arctan2((a * np.cos(np.radians(45)) - b), (a * np.sin(np.radians(45))))
 
-        # Speed control based on the steering angle
-        if abs(self.steer_angle) < 0.1745:
-            self.speed = 1.5
-        elif 0.1745 <= abs(self.steer_angle) < 0.349:
-            self.speed = 1.0
+        # Calculate the current distance to the wall
+        current_distance = b * np.cos(alpha)
+
+        # Optional: Implement lookahead distance
+        L = .75 # Example lookahead distance, adjust as needed
+        lookahead_distance = current_distance + (L * np.sin(alpha))
+
+        # Calculate the error
+        error = self.desired_distance - lookahead_distance  # Use lookahead distance for error calculation
+
+        self.get_logger().info(f'a: {a}, b: {b}, alpha: {alpha}')
+
+        if 0.0 < abs(error) < .15:
+            error = 0.0
+
+        return error
+    
+    """
+    Based on the calculated error, publish vehicle control
+
+    Args:
+        error: calculated error
+        velocity: desired velocity
+
+    Returns:
+        None
+    """
+    # NEGATIVE error ==> RIGHT 
+    # POSITIVE error ==> LEFT
+    def pid_control(self, error, velocity):        
+        p = self.kp * error
+        i = self.ki * self.integral
+        d = self.kd * (error - self.prev_error)
+
+        angle = p + i + d
+    
+        self.prev_error = error
+
+        # Speed control based on steering angle
+        if abs(angle) < np.radians(10):
+            velocity = 1.5
+        elif abs(angle) < np.radians(20):
+            velocity = 1.0
         else:
-            self.speed = 0.3
+            velocity = 0.5  
+        
+        self.get_logger().info(f'Error: {error}')
 
-        # Publish Ackermann message
-        ackermann_msg = AckermannDriveStamped()
-        ackermann_msg.drive.speed = self.speed
-        ackermann_msg.drive.steering_angle = self.steer_angle
-        ackermann_msg.header.stamp = self.get_clock().now().to_msg()
-        ackermann_msg.header.frame_id = "laser"
-        self.drive_publisher.publish(ackermann_msg)
+        drive_msg = AckermannDriveStamped()
+        drive_msg.drive.steering_angle = -angle
+        drive_msg.drive.speed = velocity
+        self.drive_publisher.publish(drive_msg)
+
+
+    
+    """
+    Callback function for LaserScan messages. Calculate the error and publish the drive message in this function.
+
+    Args:
+        msg: Incoming LaserScan message
+
+    Returns:
+        None
+    """
+    def scan_callback(self, msg):
+        error = self.get_error(msg, self.desired_distance)
+        velocity = .5  # Start with a base velocity
+        self.pid_control(error, velocity)
+
 
 def main(args=None):
     rclpy.init(args=args)
-    controller = WallFollow()
-    rclpy.spin(controller)
-    controller.destroy_node()
+    print("WallFollow Initialized")
+    wall_follow_node = WallFollow()
+    rclpy.spin(wall_follow_node)
+
+    # Destroy the node explicitly
+    # (optional - otherwise it will be done automatically
+    # when the garbage collector destroys the node object)
+    wall_follow_node.destroy_node()
     rclpy.shutdown()
 
+
 if __name__ == '__main__':
-    main()
+    main() # type: ignore
